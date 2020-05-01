@@ -1,5 +1,4 @@
-from SublimeLinter.lint import Linter  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
-
+from SublimeLinter.lint import Linter, util  # or NodeLinter, PythonLinter, ComposerLinter, RubyLinter
 
 
 class AmentCpplint(Linter):
