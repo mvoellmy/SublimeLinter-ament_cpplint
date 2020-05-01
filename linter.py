@@ -2,7 +2,7 @@ from SublimeLinter.lint import Linter, util  # or NodeLinter, PythonLinter, Comp
 
 
 class AmentCpplint(Linter):
-    cmd = ('ament_cpplint', '${args}', '${file}')
+    cmd = ('/opt/ros/eloquent/bin/ament_cpplint/ament_cpplint', '${args}', '${file}')
     regex = r'^.+:(?P<line>\d+):\s+(?P<message>.+)'
     tempfile_suffix = '-'
     error_stream = util.STREAM_BOTH  # errors are on stderr
