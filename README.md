@@ -1,30 +1,41 @@
-This is a template. For "how to make a linter", please check [the HOWTO](HOWTO.md).
+SublimeLinter-ament_cpplint
+=========================
 
------------------------------------------------------------------
+[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-ament_cpplint.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-ament_cpplint)
 
-SublimeLinter-contrib-__linter__
-================================
-
-[![Build Status](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-__linter__.svg?branch=master)](https://travis-ci.org/SublimeLinter/SublimeLinter-contrib-__linter__)
-
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) provides an interface to [__linter__](__linter_homepage__). It will be used with files that have the “__syntax__” syntax.
+This linter plugin for SublimeLinter provides an interface to [ament_cpplint](https://index.ros.org/p/ament_cpplint/).
+It will be used with files that have the "C" or "C++" syntax that are used within ROS2 framework.
 
 ## Installation
-SublimeLinter must be installed in order to use this plugin. 
+
+SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
 
-Before installing this plugin, you must ensure that `__linter__` is installed on your system.
+Before using this plugin, ensure that `cpplint` is installed on your system.
+To install `cpplint`, do the following:
 
-In order for `__linter__` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. The docs cover [troubleshooting PATH configuration](http://sublimelinter.readthedocs.io/en/latest/troubleshooting.html#finding-a-linter-executable).
+1. Install [Python](http://python.org/download/) and [pip](http://www.pip-installer.org/en/latest/installing.html).
+
+1. Install `cpplint` by typing the following in a terminal:
+   ```
+   [sudo] pip install cpplint
+   ```
+
+Please make sure that the path to `cpplint` is available to SublimeLinter.
+The docs cover [troubleshooting PATH configuration](http://sublimelinter.com/en/latest/troubleshooting.html#finding-a-linter-executable).
+
 
 ## Settings
-- SublimeLinter settings: http://sublimelinter.readthedocs.org/en/latest/settings.html
-- Linter settings: http://sublimelinter.readthedocs.org/en/latest/linter_settings.html
 
-Additional SublimeLinter-__linter__ settings:
+- SublimeLinter settings: http://sublimelinter.com/en/latest/settings.html
+- Linter settings: http://sublimelinter.com/en/latest/linter_settings.html
 
-|Setting|Description    |
-|:------|:--------------|
-|foo    |Something.     |
-|bar    |Something else.|
+Additional settings for SublimeLinter-cpplint
+
+|Setting|Description|
+|:------|:----------|
+|filter|A comma-separated list of category-filters to apply|
+|linelength|The allowed line length (with cpplint >= 0.0.6)|
+
+``filter`` can be a single string (anywhere) or array of strings (anywhere but inline).
